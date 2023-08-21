@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	/*checking if format is not null and charact at index i not null*/
 	{
 		if (format[i] != '%')
-			char_printed_count += write(1, &format, 1);
+			char_printed_count += write(1, format, 1);
 		else
 			char_printed_count += specifier_checker(format[++i], arg_list);
 	}
