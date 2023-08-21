@@ -25,12 +25,12 @@ int i = 0;
 char *str;
 if (str == NULL)
 {
-putchar("(null)");
+_putchar("(null)");
 return (i);
 }
 while (str[i])
 {
-putchar(str[i]);
+_putchar(str[i]);
 i++;
 }
 return (i);
