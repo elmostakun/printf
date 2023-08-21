@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int _printf(const char *format, ...);
 int specifier_checker(char spec_form, va_list arg_list);
