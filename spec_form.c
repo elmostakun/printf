@@ -22,7 +22,7 @@ int specifier_checker(char spec_form, va_list arg_list)
 	{
 		char_len += print_s(va_arg(arg_list, char *));
 	}
-	else if (spec_form == 'd' || 'i')
+	else if (spec_form == 'd' || spec_form == 'i')
 	{
 		char_len += print_d((long)(va_arg(arg_list, int)), 10);
 	}
