@@ -7,7 +7,7 @@
  * Return: the conversion in base 10
  */
 
-int print_d(long int n, int base)
+int print_d(int n, int base)
 {
 	int div_count = 0;
 	/*Here, this variable is declared to hold a portion*/

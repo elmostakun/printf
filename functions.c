@@ -6,7 +6,7 @@
  * Return:characters printed
  */
 
-int print_c(char c)
+int print_c(int c)
 {
 	return (write(1, &c, 1));
 }
@@ -22,10 +22,10 @@ int print_s(char *s)
 	int count = 0;
 
 	if (!s)
-		return (print_s("NULL");
+		return (print_s("NULL"));
 
 	for (count = 0; s[count] != '\0'; count++)
-		print_c(s[count]);
+		print_c((int)s[count]);
 
 	return (count);
 }

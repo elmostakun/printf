@@ -17,9 +17,9 @@ int specifier_checker(char spec_form, va_list arg_list)
 	if (spec_form == 'c')
 		char_len += print_c(va_arg(arg_list, int));
 	else if (spec_form == 's')
-		char_len += print_c(va_arg(arg_list, char *));
+		char_len += print_s(va_arg(arg_list, char *));
 	else if (spec_form == 'd' || spec_form == 'i')
-		char_len += print_d(va_arg((arg_list, int), 10);
+		char_len += print_d(va_arg(arg_list, int), 10);
 	else if (spec_form == '%')
 		char_len += _putchar('%');
 	else if (spec_form == 'x')
