@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define SIZE 1024
+
 int _printf(const char *format, ...);
 int specifier_checker(char spec_form, va_list arg_list);
 int print_x(unsigned int n, int base);

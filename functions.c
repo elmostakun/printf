@@ -8,7 +8,7 @@
 
 int print_c(int c)
 {
-return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
 /**
@@ -19,11 +19,13 @@ return (write(1, &c, 1));
 
 int print_s(char *s)
 {
-int i = 0;
+	int i = 0;
 
-while (*s != '\0')
-print_c((int)*s);
-++i;
-++s;
-return (i);
+	while (*s != '\0')
+	{
+		print_c((int)*s);
+		++i;
+		++s;
+	}
+	return (i);
 }
