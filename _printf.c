@@ -16,14 +16,20 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	for (i = 0; format && format[i] != '\0'; i++)
-	/*checking if format is not null and charact at index i not null*/
-	{
-		if (format[i] != '%')
-			char_printed_count += write(1, format, 1);
-		else
-			char_printed_count += specifier_checker(format[++i], arg_list);
-	}
+	while (format[i] != '\0')
+	  /*checking if format is not null and charact at index i not null*/
+	  {
+	    if (format[i] != '%')
+	      {
+		char_printed_count += write(1, &format[i], 1);
+		i++;
+	      }
+	    else
+	      {
+		char_printed_count += specifier_checker(format[++i], arg_list);
+		i++;
+	      }
+	  }
 	va_end(arg_list);
 
 	return (char_printed_count);
