@@ -9,21 +9,27 @@
 int _printf(const char *format, ...)
 {
 	va_list arg_list;
-	int char_printed_count, i;
+
+	int i = 0;
+	int char_printed_count = 0;
 
 	va_start(arg_list, format);
-	char_printed_count = 0;
-
-	if (format == NULL)
+	if (!format)
 		return (-1);
-	for (i = 0; format && format[i] != '\0'; i++)
-	/*checking if format is not null and charact at index i not null*/
+	while (format[i])
 	{
 		if (format[i] != '%')
-			char_printed_count += write(1, format, 1);
+			char_printed_count += _putchar(format[i]);
 		else
-			char_printed_count += specifier_checker(format[++i], arg_list);
+		{
+			i++;
+			if (format[i] != '\0')
+				return (-1);
+			char_printed_count += specifier_checker(format[i], arg_list);
+		}
+		i++;
 	}
+
 	va_end(arg_list);
 
 	return (char_printed_count);
