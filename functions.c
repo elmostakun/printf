@@ -19,13 +19,19 @@ int print_c(int c)
 
 int print_s(char *s)
 {
-	int count = 0;
+  int i = 0;
 
-	if (!s)
-		return (print_s("NULL"));
+	if (s == NULL)
+	  {
+	    print_c("(null)");
+	    return (i);
+	  }
+	
+	while (s[i])
+	  {
+	    _putchar(s[i]);
+	    i++;
+	  }
 
-	for (count = 0; s[count] != '\0'; count++)
-		print_c((int)s[count]);
-
-	return (count);
+	return (i);
 }
