@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  * _printf - User defined printf function
@@ -35,10 +34,7 @@ int _printf(const char *format, ...)
 		/*if current character not %, print it out*/
 		/*this process above goes on until nothing is left in format i.e NULL*/
 	}
-
 	va_end(arg_list);
-	/*Call va_end() function to clean up the call to variadic macros*/
 
 	return (char_printed_count);
-	/*return total characters printed*/
 }
