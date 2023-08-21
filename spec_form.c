@@ -29,7 +29,7 @@ int specifier_checker(char spec_form, va_list arg_list)
 	else if (spec_form == 'x')
 	{
 		/*here checks on base 16 or hexadecimal is done*/
-		char_len += print_x((long)(va_arg(arg_list, unsigned int)), 16);
+		char_len += print_x((va_arg(arg_list, unsigned int)), 16);
 	}
 	else
 	{

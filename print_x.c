@@ -26,7 +26,7 @@ int print_x(unsigned int n, int base)
 		/*the if above checks if the number to*/
 		/*convert is less than base to convert to*/
 		/*but not negative number*/
-		return (print_x(converter[n]));
+		return (print_c(converter[n]));
 		/* number is less, we select its index from lookup table*/
 		/*and return it*/
 	}

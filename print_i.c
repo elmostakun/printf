@@ -7,7 +7,7 @@
  * Return: the conversion in base 10
  */
 
-int print_d(unsigned int n, int base)
+int print_d(long int n, int base)
 {
 	int div_count = 0;
 	/*Here, this variable is declared to hold a portion*/
@@ -26,7 +26,7 @@ int print_d(unsigned int n, int base)
 		/*the if above checks if the number to*/
 		/*convert is less than base to convert to*/
 		/*but not negative number*/
-		return (print_d(converter[n]));
+		return (print_c(converter[n]));
 		/* number is less, we select its index from lookup table*/
 		/*and return it*/
 	}

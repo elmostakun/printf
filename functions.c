@@ -21,7 +21,7 @@ int print_s(char *s)
 {
 int i = 0;
 
-while (*str != '\0')
+while (*s != '\0')
 print_c((int)*s);
 ++i;
 ++s;
