@@ -7,7 +7,7 @@
  * Return: the conversion in base 16
  */
 
-int print_x(unsigned int n, int base)
+int print_x(unsigned int n, unsigned int base)
 {
 	int div_count = 0;
 	/*Here, this variable is declared to hold a portion*/
