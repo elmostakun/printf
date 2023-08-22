@@ -26,7 +26,7 @@ int print_d(int n, int base)
 		/*the if above checks if the number to*/
 		/*convert is less than base to convert to*/
 		/*but not negative number*/
-		return (print_c(converter[n]));
+		return (_putchar(converter[n]));
 		/* number is less, we select its index from lookup table*/
 		/*and return it*/
 	}

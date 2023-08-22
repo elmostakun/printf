@@ -8,6 +8,8 @@
 
 #define SIZE 1024
 
+int print_b(unsigned int d, unsigned int base);
+int print_o(unsigned int d, unsigned int base);
 int _printf(const char *format, ...);
 int specifier_checker(char spec_form, va_list arg_list);
 int print_x(unsigned int n, unsigned int base);

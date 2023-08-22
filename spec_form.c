@@ -21,7 +21,13 @@ int specifier_checker(char spec_form, va_list arg_list)
 	else if (spec_form == 'd' || spec_form == 'i')
 		char_len += print_d(va_arg(arg_list, int), 10);
 	else if (spec_form == 'x')
-		char_len += print_x(va_arg(arg_list, int), 16);
+		char_len += print_x(va_arg(arg_list, unsigned int), 16);
+	else if (spec_form == 'b')
+		char_len += print_b(va_arg(arg_list, unsigned int), 2);
+	else if (spec_form == 'o')
+		char_len += print_o(va_arg(arg_list, unsigned int), 8);
+	else if (spec_form == 'X')
+		char_len += print_xc(va_arg(arg_list, unsigned int), 16);
 	else
 		char_len += write(1, &spec_form, 1);
 
