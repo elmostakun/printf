@@ -23,13 +23,13 @@ int print_s(char *s)
 
 	if (s == NULL)
 	  {
-	    print_c("(null)");
+	    print_s("NULL");
 	    return (i);
 	  }
 	
 	while (s[i])
 	  {
-	    _putchar(s[i]);
+	    print_c((int)s[i]);
 	    i++;
 	  }
 
