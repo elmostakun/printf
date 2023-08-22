@@ -8,7 +8,7 @@
 
 int print_c(int c)
 {
-	return (write(1, &c, 1));
+return (write(1, &c, 1));
 }
 
 /**
@@ -19,19 +19,19 @@ int print_c(int c)
 
 int print_s(char *s)
 {
-  int i = 0;
+int i = 0;
 
-	if (s == NULL)
-	  {
-	    print_s("NULL");
-	    return (i);
-	  }
-	
-	while (s[i])
-	  {
-	    print_c((int)s[i]);
-	    i++;
-	  }
+if (s == NULL)
+{
+print_s("NULL");
+return (i);
+}
 
-	return (i);
+while (s[i])
+{
+print_c((int)s[i]);
+i++;
+}
+
+return (i);
 }
