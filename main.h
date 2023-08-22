@@ -8,6 +8,7 @@
 
 #define SIZE 1024
 
+int print_rev(char *string);
 int print_b(unsigned int d, unsigned int base);
 int print_o(unsigned int d, unsigned int base);
 int _printf(const char *format, ...);
